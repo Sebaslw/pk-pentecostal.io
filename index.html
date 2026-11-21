@@ -206,7 +206,7 @@ footer b{color:var(--texto)}
 <section class="portada" id="inicio">
   <div class="contenedor">
     <div>
-      <span class="etiqueta">Software gratuito para iglesias · v1.0.2</span>
+      <span class="etiqueta">Software gratuito para iglesias · v<span data-version>2.0.0</span></span>
       <h1>La Palabra y la alabanza, <span>en todas las pantallas</span></h1>
       <p class="lead">Proyecte versículos de la Biblia, letras de canciones y rótulos con nombres en el proyector de la iglesia y en la transmisión en vivo con OBS Studio, desde un solo panel y con el celular como control remoto.</p>
       <div class="insignias">
@@ -331,13 +331,13 @@ footer b{color:var(--texto)}
     <div class="centro revelar">
       <span class="etiqueta">Cómo funciona</span>
       <h2>Liviano y sin complicaciones</h2>
-      <p class="lead">Un pequeño servidor en Node.js puro, sin dependencias, reparte lo que usted elige a cada pantalla de la red local.</p>
+      <p class="lead">Un programa de escritorio para Windows con su propio servidor interno: reparte lo que usted elige a cada pantalla de la red local. No necesita instalar nada más.</p>
     </div>
     <div class="flujo revelar">
       <div class="nodo"><b>📚 Contenido</b><small>Biblias, cancioneros y fondos incluidos en la carpeta del programa</small></div>
       <div class="flecha">➜</div>
       <div class="salidas">
-        <div class="nodo central"><b>⚙️ PK-PENTECOSTAL</b><small>Panel de control en $1pkipuc.localhost</code></small></div>
+        <div class="nodo central"><b>⚙️ PK-PENTECOSTAL</b><small>Panel de control en <code>http://pkipuc.localhost</code></small></div>
         <div class="nodo"><b>📽️ Proyector / TV</b><small>Ventana a pantalla completa en la 2.ª pantalla</small></div>
         <div class="nodo"><b>🎬 OBS Studio</b><small>Fuentes de navegador <code>/capa</code> y <code>/salida</code></small></div>
         <div class="nodo"><b>📱 Celulares</b><small>Android e iPhone por Wi-Fi + código QR</small></div>
@@ -354,18 +354,16 @@ footer b{color:var(--texto)}
       <h2>Listo en 3 pasos</h2>
     </div>
     <div class="pasos">
-      <div class="paso revelar"><div><h3>Instale Node.js (una sola vez)</h3><p>Descargue <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a> versión <b>LTS</b> (16 o superior, gratis). Si no está instalado, el programa lo avisa y abre la página de descarga.</p></div></div>
-      <div class="paso revelar"><div><h3>Descargue y descomprima</h3><p>Vaya a <a href="#descargas" data-descargar>Descargas</a>, guarde el archivo <code>.zip</code> y descomprímalo donde quiera (por ejemplo, en el Escritorio o en <code>Documentos</code>).</p></div></div>
-      <div class="paso revelar"><div><h3>Ábralo</h3>
+      <div class="paso revelar"><div><h3>Descárguelo</h3><p>En <a href="#descargas" data-descargar>Descargas</a> elija el <b>Instalador</b> (recomendado) o la versión <b>Portable</b>. Ya trae todo lo necesario: <b>no hace falta instalar Node.js</b> ni ningún otro programa.</p></div></div>
+      <div class="paso revelar"><div><h3>Instálelo o ábralo</h3>
         <div class="envoltura-tabla"><table class="tabla">
-          <tr><th>Sistema</th><th>Cómo abrirlo</th></tr>
-          <tr><td>🪟 Windows</td><td>Doble clic en <code>PK-PENTECOSTAL.vbs</code> (sin ventana negra) o <code>PK-PENTECOSTAL.bat</code> (muestra direcciones y errores). Para el acceso directo con logo: <code>Crear acceso directo (Windows).vbs</code>.</td></tr>
-          <tr><td>🍎 macOS</td><td>Doble clic en <code>iniciar-mac.command</code> (la primera vez: clic derecho → Abrir).</td></tr>
-          <tr><td>🐧 Linux</td><td><code>chmod +x iniciar-linux.sh && ./iniciar-linux.sh</code> · para agregarlo al menú: <code>--instalar</code></td></tr>
-        </table></div>
-        <p style="margin-top:14px">El panel se abre solo en el navegador en <code>http://pkipuc.localhost</code>.</p></div></div>
+          <tr><th>Versión</th><th>Cómo se usa</th></tr>
+          <tr><td>🪟 Instalador</td><td>Doble clic en <code>PK-PENTECOSTAL-Instalador.exe</code> → <i>Siguiente</i>. Crea el acceso directo en el Escritorio y en el menú Inicio, y se desinstala desde <i>Configuración → Aplicaciones</i>.</td></tr>
+          <tr><td>💼 Portable</td><td>Doble clic en <code>PK-PENTECOSTAL-Portable.exe</code>. No se instala: sirve en una memoria USB y guarda sus ajustes en la carpeta <code>PK-PENTECOSTAL datos</code>, al lado del archivo.</td></tr>
+          <tr><td>🍎 🐧 macOS / Linux</td><td>Descargue el <code>.zip</code> del código fuente (necesita <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>) y abra <code>iniciar-mac.command</code> o <code>iniciar-linux.sh</code>.</td></tr>
+        </table></div></div></div>
+      <div class="paso revelar"><div><h3>¡Listo!</h3><p>El panel se abre solo en su propia ventana. Si otro programa usa el puerto 8888, PK-PENTECOSTAL elige otro automáticamente; si ya estaba abierto, solo muestra la ventana.</p></div></div>
     </div>
-    <div class="nota revelar">🤖 <b>Opcional · Traductor sin internet:</b> ejecute <code>node PK-PENTECOSTAL/traductor/instalar.js</code>. Descarga una sola vez el modelo abierto <i>Helsinki-NLP opus-mt-es-en</i> (~115 MB) y luego traduce canciones al inglés sin conexión.</div>
   </div>
 </section>
 
@@ -452,16 +450,17 @@ footer b{color:var(--texto)}
       <span class="etiqueta">Ayuda</span>
       <h2>Preguntas frecuentes</h2>
     </div>
-    <details class="revelar"><summary>¿Necesito internet?</summary><p>No. Solo para descargar el programa y Node.js la primera vez. Durante el culto todo funciona sin conexión, incluido el traductor (si lo instaló).</p></details>
+    <details class="revelar"><summary>¿Necesito internet?</summary><p>No. Solo para descargar el programa. Durante el culto todo funciona sin conexión.</p></details>
+    <details class="revelar"><summary>Windows dice “Windows protegió su PC”</summary><p>Es normal en programas gratuitos sin firma digital paga. Pulse <b>Más información → Ejecutar de todas formas</b>. Solo pasa la primera vez.</p></details>
     <details class="revelar"><summary>¿Cuánto cuesta?</summary><p>Nada. PK-PENTECOSTAL es gratuito para las iglesias.</p></details>
-    <details class="revelar"><summary>“El puerto 8888 está ocupado”</summary><p>Otro programa usa el puerto (por ejemplo, el Proyektor original). Ciérrelo y abra PK-PENTECOSTAL de nuevo. Si el programa ya estaba abierto, volver a abrirlo solo muestra el panel.</p></details>
+    <details class="revelar"><summary>“El puerto 8888 está ocupado”</summary><p>Desde la versión 2.0 ya no hay que hacer nada: si otro programa (por ejemplo, el Proyektor original) usa el puerto 8888, PK-PENTECOSTAL elige solo otro libre y no cierra el otro programa. Si ya estaba abierto, abrirlo de nuevo solo muestra la ventana.</p></details>
     <details class="revelar"><summary>El celular no abre la página</summary><ul>
       <li>Revise que ambos estén en el <b>mismo Wi-Fi</b> (no en datos móviles).</li>
       <li>Si el computador tiene varias redes, elija otra en <b>“Red:”</b>.</li>
       <li>Permita el programa en el Firewall de Windows, o use <b>Wi-Fi propio</b> desde la ventana del QR.</li></ul></details>
     <details class="revelar"><summary>El proyector no se abre en la segunda pantalla</summary><p>En Chrome o Edge, la primera vez acepte el permiso <b>“administrar ventanas en todas las pantallas”</b>. En otros navegadores, lleve la ventana al proyector y pulse <kbd>F</kbd> o <kbd>F11</kbd>.</p></details>
-    <details class="revelar"><summary>¿Cómo actualizo sin perder mis ajustes?</summary><p>Haga primero un <b>💾 Respaldo</b> desde el programa. Luego descargue la versión nueva y reemplace la carpeta del programa. Sus ajustes viven en la carpeta privada <code>BSPK</code>, al lado del programa, y no se tocan.</p></details>
-    <details class="revelar"><summary>¿Dónde está el manual completo?</summary><p>Dentro del archivo descargado viene <code>Manual PK-PENTECOSTAL.pdf</code> con todas las funciones paso a paso, y la guía rápida <code>PK-PENTECOSTAL/LEEME.txt</code>.</p></details>
+    <details class="revelar"><summary>¿Cómo actualizo sin perder mis ajustes?</summary><p>Instale la versión nueva encima de la anterior: sus ajustes viven aparte (en <code>%APPDATA%\PK-PENTECOSTAL</code>) y se conservan incluso al desinstalar. ¿Venía de la versión de carpeta (1.x, con <code>PK-PENTECOSTAL.vbs</code>)? Abra el programa, pulse <kbd>Alt</kbd> → <b>Archivo → Importar datos de una versión anterior…</b> y elija esa carpeta: se copia todo y antes se guarda un respaldo.</p></details>
+    <details class="revelar"><summary>¿Dónde está el manual completo?</summary><p>En el programa: <kbd>Alt</kbd> → <b>Ayuda → Manual de PK-PENTECOSTAL</b> (PDF con todas las funciones paso a paso).</p></details>
   </div>
 </section>
 
@@ -475,21 +474,23 @@ footer b{color:var(--texto)}
     </div>
     <div class="caja-descarga">
       <img src="img/icono.png" alt="">
-      <h3>PK-PENTECOSTAL <span id="d-version">1.0.2</span></h3>
+      <h3>PK-PENTECOSTAL <span id="d-version">2.0.0</span> para Windows</h3>
       <div class="datos">
-        <span>📦 <b id="d-nombre">PK-PENTECOSTAL-1.0.2.zip</b></span>
+        <span>📦 <b id="d-nombre">PK-PENTECOSTAL-Instalador-2.0.0.exe</b></span>
         <span>💾 <b id="d-tamano">—</b></span>
         <span>📅 <b id="d-fecha">—</b></span>
-        <span>🪟 🍎 🐧 Windows · macOS · Linux</span>
+        <span>🪟 Windows 10 y 11 (64 bits)</span>
       </div>
-      <a class="boton primario" id="btn-zip" href="descargas/PK-PENTECOSTAL-1.0.2.zip" download>⬇ Descargar .zip</a>
+      <a class="boton primario" id="btn-zip" href="#descargas" download>⬇ Descargar instalador</a>
+      <a class="boton secundario" id="btn-portable" href="#descargas" download style="margin-left:8px">💼 Versión portable <small id="d-portable" style="font-weight:400;opacity:.8"></small></a>
       <div class="estado" id="estado" aria-live="polite"></div>
       <div class="hash" id="d-hash"></div>
+      <p class="hash" id="d-fuente" style="margin-top:10px"></p>
     </div>
     <div class="requisitos">
-      <div class="tarjeta"><h3>✅ Requisito</h3><p><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js LTS</a> 16 o superior (gratis).</p></div>
+      <div class="tarjeta"><h3>✅ Sin requisitos</h3><p>No necesita Node.js ni otros programas: todo viene incluido. Funciona sin internet.</p></div>
       <div class="tarjeta"><h3>📖 Incluye</h3><p>Programa, 9 Biblias, 6 cancioneros, fondos, tipografías y el manual PDF.</p></div>
-      <div class="tarjeta"><h3>🔒 Privado</h3><p>No incluye datos de otras iglesias: sus ajustes se crean nuevos en su equipo.</p></div>
+      <div class="tarjeta"><h3>🔒 Privado</h3><p>No incluye datos de otras iglesias: sus ajustes se crean nuevos en su equipo y se conservan al actualizar.</p></div>
     </div>
   </div>
 </section>
@@ -499,45 +500,50 @@ footer b{color:var(--texto)}
     <img src="img/icono.png" alt="PK-PENTECOSTAL">
     <p><b>🙏 Hecho con amor</b> · Sebastián López · IPUC Natania 6.ª Etapa<br>
     Zona Especial Misionera — Archipiélago de San Andrés, Providencia y Santa Catalina 🇨🇴</p>
-    <p>PK-PENTECOSTAL 1.0.2 · Software gratuito para iglesias</p>
+    <p>PK-PENTECOSTAL <span data-version>2.0.0</span> · Software gratuito para iglesias</p>
   </div>
 </footer>
 
 <script src="descargas/info.js"></script>
 <script>
 (function(){
-  // ---------- Datos del archivo (los escribe web/crear-zip.ps1) ----------
+  // ---------- Datos de las descargas (los escribe web/crear-zip.ps1) ----------
+  // PK_DESCARGA = { version, fecha, instalador:{nombre,url,tamanoMB,sha256}, portable:{…}, zip:{…} }
   var D = window.PK_DESCARGA || null;
-  var btn = document.getElementById('btn-zip'), estado = document.getElementById('estado');
-  // En la computadora (file:// o localhost) usa el .zip local; publicada en internet, el Release de GitHub
-  var local = location.protocol === 'file:' || /^(localhost|127\.)/.test(location.hostname);
-  if (D && D.urlWeb && !local) D.archivo = D.urlWeb;
-  if (D) {
-    btn.href = D.archivo; btn.setAttribute('download', D.nombre);
+  var btn = document.getElementById('btn-zip'), btnP = document.getElementById('btn-portable'), estado = document.getElementById('estado');
+  var mb = function (x) { return String(x.tamanoMB).replace('.', ',') + ' MB'; };
+  var I = D && (D.instalador || D);
+  if (D && I && I.url) {
+    btn.href = I.url; btn.setAttribute('download', I.nombre);
+    document.querySelectorAll('[data-version]').forEach(function (el) { el.textContent = D.version; });
     document.getElementById('d-version').textContent = D.version;
-    document.getElementById('d-nombre').textContent = D.nombre;
-    document.getElementById('d-tamano').textContent = String(D.tamanoMB).replace('.', ',') + ' MB';
+    document.getElementById('d-nombre').textContent = I.nombre;
+    document.getElementById('d-tamano').textContent = mb(I);
     var f = D.fecha.split('-'); document.getElementById('d-fecha').textContent = f[2] + '/' + f[1] + '/' + f[0];
-    document.getElementById('d-hash').textContent = 'SHA-256: ' + D.sha256;
+    document.getElementById('d-hash').textContent = 'SHA-256 (instalador): ' + I.sha256;
+    if (D.portable) { btnP.href = D.portable.url; btnP.setAttribute('download', D.portable.nombre); document.getElementById('d-portable').textContent = '· ' + mb(D.portable); }
+    else btnP.hidden = true;
+    var fz = document.getElementById('d-fuente');
+    if (D.zip) { fz.innerHTML = '🍎 🐧 macOS / Linux: <a href="' + D.zip.url + '" download>' + D.zip.nombre + '</a> (' + mb(D.zip) + ', código fuente, necesita Node.js)'; }
   }
 
-  // ---------- Descarga automática ----------
+  // ---------- Descarga automática (el instalador) ----------
   var yaDescargo = false;
   function descargar(){
     if (yaDescargo) return;
     yaDescargo = true;
-    if (!D) {
+    if (!I || !I.url) {
       estado.className = 'estado aviso';
-      estado.textContent = 'El archivo todavía no está listo. Ejecute web/crear-zip.ps1 para crearlo.';
+      estado.textContent = 'La descarga todavía no está lista.';
       return;
     }
     var a = document.createElement('a');
-    a.href = D.archivo; a.download = D.nombre; a.style.display = 'none';
+    a.href = I.url; a.download = I.nombre; a.style.display = 'none';
     document.body.appendChild(a); a.click(); a.remove();
     estado.className = 'estado';
-    estado.textContent = '✔ La descarga empezó. Revise la barra de descargas de su navegador.';
+    estado.textContent = '✔ La descarga del instalador empezó. Revise la barra de descargas de su navegador.';
   }
-  btn.addEventListener('click', function(){ yaDescargo = true; estado.className = 'estado'; estado.textContent = '✔ Descargando…'; });
+  [btn, btnP].forEach(function (b) { b.addEventListener('click', function(){ yaDescargo = true; estado.className = 'estado'; estado.textContent = '✔ Descargando…'; }); });
   document.querySelectorAll('[data-descargar]').forEach(function(el){
     el.addEventListener('click', function(){ setTimeout(descargar, 350); });
   });
