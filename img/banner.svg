@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" role="img" aria-label="PK-PENTECOSTAL · Biblia, canciones y rótulos para proyector y OBS">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030b1f"/>
+      <stop offset=".45" stop-color="#0b2a6b"/>
+      <stop offset=".8" stop-color="#3b1679"/>
+      <stop offset="1" stop-color="#0b1022"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".5" cy="0" r=".75">
+      <stop offset="0" stop-color="#fde68a" stop-opacity=".55"/>
+      <stop offset=".35" stop-color="#f59e0b" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rayo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff7d6" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff7d6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="titulo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="dorado" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#fde047"/>
+    </linearGradient>
+    <linearGradient id="brillo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d4ed8"/><stop offset=".55" stop-color="#4c1d95"/><stop offset="1" stop-color="#0b1022"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d7dcea"/>
+    </linearGradient>
+    <radialGradient id="lens" cx=".4" cy=".35" r=".75">
+      <stop offset="0" stop-color="#3b4b72"/><stop offset=".6" stop-color="#151b2e"/><stop offset="1" stop-color="#05070d"/>
+    </radialGradient>
+    <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f97316"/><stop offset="1" stop-color="#fde047"/>
+    </linearGradient>
+    <filter id="suave" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
+    <filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity=".55"/>
+    </filter>
+    <clipPath id="marco"><rect width="1280" height="420" rx="28"/></clipPath>
+    <style>
+      .rayos { transform-origin: 640px -40px; animation: girar 26s ease-in-out infinite alternate; }
+      @keyframes girar { from { transform: rotate(-7deg); } to { transform: rotate(7deg); } }
+      .p { animation: subir linear infinite; }
+      @keyframes subir { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .9; } 85% { opacity: .9; } 100% { transform: translateY(-300px); opacity: 0; } }
+      .logo { animation: flotar 5s ease-in-out infinite; transform-origin: 215px 210px; }
+      @keyframes flotar { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+      .rec { animation: latir 1.4s ease-in-out infinite; }
+      @keyframes latir { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+      .onda { animation: onda 2.4s ease-out infinite; }
+      .onda2 { animation-delay: .8s; }
+      @keyframes onda { 0% { opacity: 0; } 30% { opacity: 1; } 100% { opacity: 0; } }
+      .barrido { animation: barrer 6s ease-in-out infinite; }
+      @keyframes barrer { 0%,55% { transform: translateX(-500px); } 100% { transform: translateX(1400px); } }
+      .vivo { animation: latir 1.6s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#marco)">
+    <rect width="1280" height="420" fill="url(#cielo)"/>
+    <rect width="1280" height="420" fill="url(#halo)"/>
+
+    <!-- Rayos de luz -->
+    <g class="rayos" opacity=".55">
+      <path d="M640 -40 L420 460 L500 460 Z" fill="url(#rayo)"/>
+      <path d="M640 -40 L560 460 L620 460 Z" fill="url(#rayo)"/>
+      <path d="M640 -40 L680 460 L760 460 Z" fill="url(#rayo)"/>
+      <path d="M640 -40 L820 460 L880 460 Z" fill="url(#rayo)"/>
+      <path d="M640 -40 L250 460 L300 460 Z" fill="url(#rayo)" opacity=".6"/>
+      <path d="M640 -40 L980 460 L1060 460 Z" fill="url(#rayo)" opacity=".6"/>
+    </g>
+
+    <!-- Partículas que suben -->
+    <g fill="#fde68a" filter="url(#suave)">
+      <circle class="p" cx="90"  cy="430" r="3"   style="animation-duration:9s"/>
+      <circle class="p" cx="180" cy="460" r="2"   style="animation-duration:12s;animation-delay:-3s"/>
+      <circle class="p" cx="330" cy="440" r="2.5" style="animation-duration:10s;animation-delay:-6s"/>
+      <circle class="p" cx="470" cy="450" r="3.5" style="animation-duration:14s;animation-delay:-1s"/>
+      <circle class="p" cx="590" cy="430" r="2"   style="animation-duration:8s;animation-delay:-4s"/>
+      <circle class="p" cx="700" cy="460" r="3"   style="animation-duration:11s;animation-delay:-7s"/>
+      <circle class="p" cx="820" cy="440" r="2.5" style="animation-duration:13s;animation-delay:-2s"/>
+      <circle class="p" cx="930" cy="450" r="2"   style="animation-duration:9s;animation-delay:-5s"/>
+      <circle class="p" cx="1040" cy="430" r="3.5" style="animation-duration:12s;animation-delay:-8s"/>
+      <circle class="p" cx="1150" cy="460" r="2.5" style="animation-duration:10s;animation-delay:-3.5s"/>
+      <circle class="p" cx="1230" cy="440" r="2"  style="animation-duration:15s;animation-delay:-9s"/>
+    </g>
+    <g fill="#93c5fd" filter="url(#suave)" opacity=".8">
+      <circle class="p" cx="130" cy="450" r="2"  style="animation-duration:11s;animation-delay:-5s"/>
+      <circle class="p" cx="400" cy="460" r="3"  style="animation-duration:13s;animation-delay:-9s"/>
+      <circle class="p" cx="760" cy="440" r="2"  style="animation-duration:10s;animation-delay:-2.5s"/>
+      <circle class="p" cx="990" cy="460" r="3"  style="animation-duration:14s;animation-delay:-6.5s"/>
+      <circle class="p" cx="1190" cy="430" r="2" style="animation-duration:9s;animation-delay:-1.5s"/>
+    </g>
+
+    <!-- Logo -->
+    <g class="logo" filter="url(#sombra)">
+      <svg x="85" y="80" width="260" height="260" viewBox="0 0 512 512">
+        <rect x="8" y="8" width="496" height="496" rx="112" fill="url(#bg)"/>
+        <g fill="none" stroke="#7dd3fc" stroke-linecap="round" stroke-width="18">
+          <path class="onda" d="M378 118a78 78 0 0 1 46 46"/>
+          <path class="onda onda2" d="M384 70a126 126 0 0 1 88 88"/>
+        </g>
+        <path d="M138 156h70l18-30h76l18 30h18v20H138z" fill="#e6eaf5"/>
+        <rect x="64" y="166" width="300" height="214" rx="38" fill="url(#body)"/>
+        <path d="M364 222l84-46v206l-84-46z" fill="#e6eaf5"/>
+        <circle cx="214" cy="273" r="86" fill="#0b1022"/>
+        <circle cx="214" cy="273" r="70" fill="url(#lens)"/>
+        <g fill="#ffffff"><circle cx="214" cy="226" r="17"/><circle cx="173.3" cy="296.5" r="17"/><circle cx="254.7" cy="296.5" r="17"/></g>
+        <circle cx="214" cy="273" r="47" fill="none" stroke="#ffffff" stroke-width="8" stroke-dasharray="46 28" opacity=".85"/>
+        <path d="M214 288c-14-12-6-28 0-38 4 10 16 16 10 30-2 5-6 8-10 8z" fill="url(#flame)"/>
+        <circle class="rec" cx="110" cy="206" r="15" fill="#ef4444"/>
+        <circle cx="110" cy="206" r="24" fill="none" stroke="#ef4444" stroke-width="4" opacity=".45"/>
+      </svg>
+    </g>
+
+    <!-- Textos -->
+    <g font-family="'Segoe UI', 'Montserrat', 'Helvetica Neue', Arial, sans-serif">
+      <g transform="translate(400 112)">
+        <rect width="150" height="30" rx="15" fill="#ef4444" fill-opacity=".18" stroke="#ef4444" stroke-opacity=".7"/>
+        <circle class="vivo" cx="20" cy="15" r="6" fill="#ef4444"/>
+        <text x="34" y="20.5" font-size="14" font-weight="800" letter-spacing="2.5" fill="#fecaca">EN VIVO</text>
+        <text x="168" y="20.5" font-size="14" font-weight="700" letter-spacing="2.5" fill="#93c5fd">VERSIÓN 1.0.2</text>
+      </g>
+      <text x="398" y="208" font-size="86" font-weight="900" letter-spacing="1" fill="url(#titulo)">PK-<tspan fill="url(#dorado)">PENTECOSTAL</tspan></text>
+      <text x="402" y="254" font-size="27" font-weight="600" fill="#dbeafe">Biblia · Canciones · Rótulos para proyector y OBS Studio</text>
+      <text x="402" y="292" font-size="19" font-weight="400" fill="#a5b4fc">Control desde el celular por QR · Español / English · Funciona sin internet</text>
+      <rect x="402" y="320" width="420" height="2" fill="url(#dorado)" opacity=".8"/>
+      <text x="402" y="352" font-size="17" font-style="italic" fill="#fde68a">«Por toda la tierra salió su voz, y hasta el extremo del mundo sus palabras.»</text>
+      <text x="402" y="376" font-size="15" font-weight="700" fill="#f59e0b" letter-spacing="1">SALMOS 19:4</text>
+    </g>
+
+    <!-- Destello que recorre el banner -->
+    <g transform="skewX(-20)"><rect class="barrido" x="0" y="0" width="220" height="420" fill="url(#brillo)"/></g>
+    <rect width="1280" height="420" rx="28" fill="none" stroke="#fde68a" stroke-opacity=".25" stroke-width="2"/>
+  </g>
+</svg>
