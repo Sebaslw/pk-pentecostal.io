@@ -1,8 +1,8 @@
 window.PK_DESCARGA = {
-  version: '2.0.0',
+  version: '2.0.1',
   fecha: '2026-11-21',
-  instalador: { nombre: 'PK-PENTECOSTAL-Instalador-2.0.0.exe', url: 'https://github.com/Sebaslw/PK-PENTECOSTAL/releases/download/v2.0.0/PK-PENTECOSTAL-Instalador-2.0.0.exe', tamanoMB: 219.8, sha256: 'df08fcfa8e39a7adc5fb0f5e7d88ad49c7541098f07d28a37e3edaa2b2a5ad44' },
-  portable: { nombre: 'PK-PENTECOSTAL-Portable-2.0.0.exe', url: 'https://github.com/Sebaslw/PK-PENTECOSTAL/releases/download/v2.0.0/PK-PENTECOSTAL-Portable-2.0.0.exe', tamanoMB: 207.8, sha256: '02839cdabb91e9542f0e044d7b099271004e37ff44eb4d126b84948bd2c2f984' },
-  zip: { nombre: 'PK-PENTECOSTAL-2.0.0-codigo-fuente.zip', url: 'https://github.com/Sebaslw/PK-PENTECOSTAL/releases/download/v2.0.0/PK-PENTECOSTAL-2.0.0-codigo-fuente.zip', tamanoMB: 125.6, sha256: '0c86f95cc33649e174b7aba33b5a718ca9fd69b0f40f8022a54537f68785a1d8' },
-  archivosZip: 246
+  instalador: { nombre: 'PK-PENTECOSTAL-Instalador-2.0.1.exe', url: 'https://github.com/Sebaslw/PK-PENTECOSTAL/releases/download/v2.0.1/PK-PENTECOSTAL-Instalador-2.0.1.exe', tamanoMB: 219.9, sha256: '6eba412b0112de7e50ac82cf1b56a2a468e0e18892150b139a2f20a467cd828c' },
+  portable: { nombre: 'PK-PENTECOSTAL-Portable-2.0.1.exe', url: 'https://github.com/Sebaslw/PK-PENTECOSTAL/releases/download/v2.0.1/PK-PENTECOSTAL-Portable-2.0.1.exe', tamanoMB: 208.1, sha256: '242f2c0bd2c98f87c89c1b68b7edae07fc5816d7da917cb50f47c022855ec6f3' },
+  zip: { nombre: 'PK-PENTECOSTAL-2.0.1-codigo-fuente.zip', url: 'https://github.com/Sebaslw/PK-PENTECOSTAL/releases/download/v2.0.1/PK-PENTECOSTAL-2.0.1-codigo-fuente.zip', tamanoMB: 75.7, sha256: 'bf90ed188ea06e8b332a85b26590e88b54231ca9bad2a97b9a4f24d6922e3544' },
+  archivosZip: 244
 };
