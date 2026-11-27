@@ -362,7 +362,9 @@ footer b{color:var(--texto)}
           <tr><th>Versión</th><th>Cómo se usa</th></tr>
           <tr><td>🪟 Instalador</td><td>Doble clic en <code>PK-PENTECOSTAL-Instalador.exe</code> → <i>Siguiente</i>. Crea el acceso directo en el Escritorio y en el menú Inicio, y se desinstala desde <i>Configuración → Aplicaciones</i>.</td></tr>
           <tr><td>💼 Portable</td><td>Doble clic en <code>PK-PENTECOSTAL-Portable.exe</code>. No se instala: sirve en una memoria USB y guarda sus ajustes en la carpeta <code>PK-PENTECOSTAL datos</code>, al lado del archivo.</td></tr>
-          <tr><td>🍎 🐧 macOS / Linux</td><td>Descargue el <code>.zip</code> del código fuente (trae la carpeta <code>NODEJS</code> con el instalador oficial de <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>, no hay que buscarlo) y abra <code>iniciar-mac.command</code> o <code>iniciar-linux.sh</code>.</td></tr>
+          <tr><td>🍎 Mac</td><td>Abra el <code>.dmg</code> y arrastre PK-PENTECOSTAL a <i>Aplicaciones</i>. Sirve en Mac Intel y Apple M1/M2/M3/M4. La primera vez: clic derecho → <i>Abrir</i> (en macOS 15: <i>Ajustes → Privacidad y seguridad → Abrir igualmente</i>).</td></tr>
+          <tr><td>🐧 Linux</td><td><code>.deb</code> para Ubuntu, Mint y Debian (<code>sudo apt install ./archivo.deb</code>) o <code>.AppImage</code> para cualquier Linux (se actualiza solo).</td></tr>
+          <tr><td>📦 Código fuente</td><td>El <code>.zip</code> trae la carpeta <code>NODEJS</code> con el instalador oficial de <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>; se abre con <code>PK-PENTECOSTAL.vbs</code>, <code>iniciar-mac.command</code> o <code>iniciar-linux.sh</code>.</td></tr>
         </table></div></div></div>
       <div class="paso revelar"><div><h3>¡Listo!</h3><p>El panel se abre solo en su propia ventana. Si otro programa usa el puerto 8888, PK-PENTECOSTAL elige otro automáticamente; si ya estaba abierto, solo muestra la ventana.</p></div></div>
     </div>
@@ -526,7 +528,12 @@ footer b{color:var(--texto)}
     if (D.portable) { btnP.href = D.portable.url; btnP.setAttribute('download', D.portable.nombre); document.getElementById('d-portable').textContent = '· ' + mb(D.portable); }
     else btnP.hidden = true;
     var fz = document.getElementById('d-fuente');
-    if (D.zip) { fz.innerHTML = '🍎 🐧 macOS / Linux: <a href="' + D.zip.url + '" download>' + D.zip.nombre + '</a> (' + mb(D.zip) + ', código fuente, incluye el instalador de Node.js)'; }
+    // Mac y Linux: los compila GitHub Actions en máquinas reales y los sube a la misma Release
+    var rel = 'https://github.com/Sebaslw/PK-PENTECOSTAL/releases/download/v' + D.version + '/PK-PENTECOSTAL-' + D.version;
+    var enl = function (u, t) { return '<a href="' + u + '" download>' + t + '</a>'; };
+    fz.innerHTML = '🍎 Mac: ' + enl(rel + '-mac.dmg', '.dmg (Intel y Apple M)') +
+      ' &nbsp;·&nbsp; 🐧 Linux: ' + enl(rel + '-linux-amd64.deb', '.deb') + ' / ' + enl(rel + '-linux-x86_64.AppImage', '.AppImage') +
+      (D.zip ? ' &nbsp;·&nbsp; 📦 ' + enl(D.zip.url, 'Código fuente .zip') + ' (' + mb(D.zip) + ')' : '');
   }
 
   // ---------- Descarga automática (el instalador) ----------
